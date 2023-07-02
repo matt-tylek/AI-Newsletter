@@ -1,38 +1,131 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* This makes sure your app takes up at least the whole height of the view */
+  background-color: rgb(240, 231, 231);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.Logo {
+  height: 100%;
+  object-fit: contain;
+}
+
+/* New class for the wallstreet image */
+.Wallstreet {
+  width: 100%;
+  height: 20vh;
+  object-fit: cover;
+}
+
+main {
+  min-height: 60vh;
+  padding: 20px;
+}
+
+footer {
+  background-color: #1c1e23;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+ background-color: rgb(71, 71, 71);}
+
+
+.Wallstreet-Container {
+  position: relative;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.Wallstreet {
+  width: 100%;
+  height: 20vh;
+  object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Buttons-Container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.Button {
+  background-color: rgb(69, 69, 69);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.Miami {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.fancy-button {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fancy-button:hover {
+  background-color: #0056b3;
+}
+
+.fancy-button:active {
+  background-color: #004080;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: flex-start;
+  width: 50%; /* Adjust this value as per your need */
+  margin-top: 10px; /* Adjust this value as per your need */
+  margin-left: -80px; /* Adjust this value as per your need */
+}
+
+.full-width-div {
+  background-color: rgb(71, 71, 71); /* Same color as your footer */
+  color: white;
 }
